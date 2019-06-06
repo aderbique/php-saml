@@ -772,7 +772,9 @@ class OneLogin_Saml2_Response
 
             $attributes[$attributeKeyName] = $attributeValues;
         }
-        return $attributes;
+        //return $attributes;
+        $username = implode(",", $attributes['uid']);
+        return $username;
     }
 
     /**
